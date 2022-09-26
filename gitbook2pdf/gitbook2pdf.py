@@ -249,8 +249,8 @@ class Gitbook2PDF():
         tmpcss = weasyprint.CSS(string=css_text)
         fname = "./output/" + fname
         htmlname = fname.replace('.pdf', '.html')
-        with open(htmlname, 'w', encoding='utf-8') as f:
-            f.write(html_text)
+#         with open(htmlname, 'w', encoding='utf-8') as f:
+#             f.write(html_text)
         print('Generating pdf,please wait patiently')
         tmphtml.write_pdf(fname, stylesheets=[tmpcss])
         print('Generated')
